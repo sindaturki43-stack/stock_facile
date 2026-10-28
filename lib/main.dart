@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+import 'screens/tests_screen.dart';
 
 
 void main() {
@@ -22,7 +23,7 @@ class StockFacileApp extends StatelessWidget {
     return MaterialApp(
       title: "StockFacile",
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const TestsScreen(),
       
       
     );

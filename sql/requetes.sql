@@ -86,4 +86,24 @@ créer l'objet. Un constructeur classique ne peut pas
 Parce que SQLite peut renvoyer un int (5) au lieu d'un double (5.0)
 pour une colonne REAL. "as double" planterait si c'est un int.
 "as num" accepte int et double, puis .toDouble() convertit toujours
-en double. C'est plus robuste.
+en double. C'est plus robuste.'
+
+Q3.1:
+-En comparant schema.sql et DatabaseHelper, les deux sont identiques :
+mêmes tables, mêmes colonnes, mêmes types, mêmes contraintes et mêmes
+4 catégories de départ. Cest voulu : ce qui marche dans DB Browser
+doit marcher pareil dans Flutter.
+
+Q3.2.1:Un seul objet est créé (singleton). DatabaseHelper() renvoie
+toujours le même objet.
+
+Q3.2.2:??= veut dire : si c'est null, on affecte. Donc la base n'est
+ouverte que si elle n'est pas déjà ouverte.'
+
+Q3.2.3:Le PRAGMA est dans onConfigure car onConfigure est appelé à chaque
+ouverture, alors que onCreate n'est appelé qu'une fois. Il faut
+réactiver les clés étrangères à chaque ouverture.
+
+Q3.2.4:onCreate est appelé une seule fois : la première fois, quand le
+fichier .db n'existe pas encore.'
+
