@@ -107,3 +107,6 @@ réactiver les clés étrangères à chaque ouverture.
 Q3.2.4:onCreate est appelé une seule fois : la première fois, quand le
 fichier .db n'existe pas encore.'
 
+Q4.1:
+INSERT INTO categories (nom, description)
+VALUES ('Électroménager', 'Petits appareils');
